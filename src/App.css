@@ -1,0 +1,557 @@
+* {
+  line-height: 1.5;
+    box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Input {
+   width: 90%;
+  padding: 00.5rem;
+   
+}
+.hint{
+  width: 40%;
+  text-align: left;
+  }
+body {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #f1eee9;
+  color: #363636;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.preloader {
+  top: 0;
+  left: 0;
+  background: #000 url(./assets/loader.gif) no-repeat center center;
+  width: 100%;
+  position: fixed;
+  background-size: 60%;
+  height: 100vh;
+  z-index: 1200;
+}
+.headquarters {
+  position: relative;
+  background: url(./assets/headquarters.jpg) no-repeat center center;
+  background-size: 100%;
+  height: 80rem;
+  width: 66.5rem;
+}
+.preloader.active {
+  display: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.productsForm {
+  width: 30%;
+  display: flex;
+  margin: 0.25rem;
+}
+.home {
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  z-index: -1;
+}
+.articles {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-items: center;
+  text-align: justify;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  justify-content: space-between;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  justify-items: center;
+  text-align: justify;
+  justify-content: space-between;
+  align-content: center;
+  gap: 1rem;
+  box-sizing: content-box;
+  margin: 1rem;
+}
+.registrationForm {
+  
+  border-radius: 5px;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.customerForm {
+  margin: auto;
+  padding: 0.5rem;
+}
+.customerTable {
+  padding: 1.25rem;
+  border-radius: 2rem;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.miniLogo {
+  background-color: #000;
+  font-style: italic;
+  padding: 00.25rem;
+  font-size: 30px;
+  color: #ffcc1d;
+  margin-left: 0.5rem;
+  font-weight: bolder;
+}
+.bankLogo {
+  background-color: #ffcc1d;
+  font-style: italic;
+  padding: 00.25rem;
+  font-size: 30px;
+  color: #000;
+
+  font-weight: bolder;
+}
+
+.registerForm {
+  display: grid;
+  padding: 1rem;
+  justify-content: space-between;
+  grid-template-columns: 40% 60%;
+}
+.btn-container {
+  margin: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+.login {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1rem;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  text-align: left;
+  margin-top: 1rem;
+}
+.about {
+  width: 60%;
+}
+.about h4 {
+  color: #3a5ba0;
+  border-bottom: solid;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.container {
+  margin: auto;
+  max-width: 1100px;
+  align-content: center;
+  padding: 1rem;
+  gap: 2px;
+  position: relative;
+}
+
+.carousel {
+  display: block;
+  margin-top: 2.5rem;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  z-index: -1;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.left-button {
+  background-color: #89b7c4;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.right-button {
+  background-color: #89b7c4;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.image-container {
+  margin: 0;
+  display: flex;
+  overflow: cover;
+  width: 100%;
+  transform: translateX(-300%);
+  transition: transform 0.4s ease-in;
+}
+.button-container {
+  display: flex;
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  top: 50%;
+}
+
+img {
+  width: 100%;
+  height: 55%;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
+.authenticateAdmin {
+  display: none;
+}
+.App-link {
+  color: #61dafb;
+}
+.customerInfo {
+  border-radius: 3%;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 60% 15% 10%;
+  justify-content: space-between;
+}
+
+.currentBalance {
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  border-radius: 0.5rem;
+}
+.footer {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  z-index: 2;
+  background-color: #3a5ba0;
+}
+.icons {
+  justify-content: space-between;
+  height: 50px;
+  width: 50px;
+}
+
+.transactions {
+ 
+  justify-content: center;
+  justify-items: center;
+  border-radius: 0.5rem;
+}
+.movements {
+  
+  padding: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.successMessage {
+  color: green;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transition: all 0.3s ease-in;
+}
+.failureMessage {
+  color: red;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transition: all 0.3s ease-in;
+}
+.registerUser {
+  margin: auto;
+  padding: 3rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+}
+.instruction {
+  position: relative;
+  visibility: visible;
+}
+.offscreen {
+  visibility: hidden;
+  height: 0;
+}
+a {
+  display: flex;
+  align-items: center;
+}
+.invalid {
+  color: red;
+}
+.hide {
+  visibility: hidden;
+}
+.valid {
+  visibility: visible;
+  color: green;
+}
+.userNav {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+.transaction {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 2.5fr 3fr;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.transactions.fundMovements {
+  width: 60%;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+  border-radius: 3%;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+.inputForm {
+  display: flex;
+  padding: 1rem;
+  margin: auto;
+  align-items: center;
+  width: 70%;
+  margin-top: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+}
+.footer svg {
+  margin: 0;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  color: #fff;
+  justify-content: space-between;
+  justify-items: center;
+  bottom: 6rem;
+  margin-top: 6rem;
+
+  background-color: #3a5ba0;
+}
+.headquarters::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 100%;
+  border-color: #3a5ba0;
+  border-left-style: dotted;
+  z-index: 1;
+  background-color: rgba(76, 77, 117, 0.145);
+}
+.btn {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: right;
+}
+.transfer {
+  margin: auto;
+  padding: 4.25rem;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.inputControl {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr 2fr;
+  margin: 00.35rem;
+}
+.transact {
+  list-style-type: disc;
+  transition: all 3s ease-in;
+}
+.transact.active {
+  list-style-type: disc;
+}
+.navRight {
+  transform: rotate(180);
+  transition: all 1s ease-in;
+}
+.services {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00092c;
+  padding-right: 02.75rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.adminNav {
+  display: none;
+  position: relative;
+  justify-content: space-between;
+}
+.adminNav.active {
+  display: flex;
+}
+.serviceNav ul {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: right;
+  list-style-type: none;
+  width: 100%;
+  transition: all 0.3s ease-in;
+ 
+}
+.customersNav {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 2.5rem;
+  padding: 0.75rem;
+  border-radius: 3px;
+}
+.customersNav.active {
+  display: flex;
+  width: 100%;
+  background-color: #00092c;
+}
+.usersNav.active {
+  display: flex;
+  width: 100%;
+  background-color: #00092c;
+}
+.usersNav {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 2.5rem;
+  padding: 0.75rem;
+  border-radius: 3px;
+}
+.toggleNav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  top: 0.5rem;
+  right: 1rem;
+  width: 30px;
+  height: 21px;
+}
+.toggleNav .bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.signOut {
+  display: flex;
+  justify-content: left;
+}
+.angleUp {
+  display: none;
+  position: absolute;
+  background-color: #00092c;
+  transition: all 0.3s ease-in;
+  z-index: -1;
+  top: -0.3rem;
+  right: 1rem;
+  width: 25px;
+  height: 25px;
+}
+@media (max-width: 700px) {
+  .toggleNav {
+    display: flex;
+    transition: all 0.3s ease-in;
+  }
+
+  .services {
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+  }
+  .usersNav {
+    text-align: right;
+  }
+
+  .serviceNav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    transition: all 0.3s ease-in;
+  }
+  .adminNav.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .angleUp.active {
+    display: flex;
+    transform: rotate(45deg);
+  }
+  .serviceNav.active {
+    display: flex;
+    flex-direction: column;
+    top: 2.75rem;
+    background-color: #00092c;
+    justify-items: left;
+    width: 100%;
+    position: absolute;
+   
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: transformY(0);
+  }
+  to {
+    transform: transformY(-200px);
+  }
+}
+.app__loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #1b1b1b91;
+  min-width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}

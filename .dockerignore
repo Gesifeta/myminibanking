@@ -1,0 +1,10 @@
+*.http
+node_modules/
+build/
+.dockerignore
+*.yml
+do-ssh-key
+do-ssh-ke.pub
+.env
+backend/config/
+

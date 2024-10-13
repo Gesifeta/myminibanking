@@ -1,0 +1,97 @@
+.mainNav {
+  display: flex;
+  padding: 0 3rem 0 3rem;
+  justify-content: space-between;
+  align-items: center;
+  color: wheat;
+  background-color: #3A5BA0;
+  width: 100vw;
+  height: 8rem;
+  font-size: larger;
+  font-weight: bolder;                
+  padding-right: 6rem;
+  transition: all 0.3s ease-in;
+ 
+}
+.mainNav.active {
+  background-color: #3A5BA0;
+ 
+  height: 80px;
+}
+.loginNav {
+  display: flex;
+  font-weight: bold;
+  background-color: #FFCC1D;
+  justify-items: center;
+    width: 100vw;
+  height: 50px;
+  overflow: none;
+  padding-right: 6rem;
+  transition: all 0.3s ease-in;
+   
+}
+.userNameInfo{
+  display: flex;
+  gap: 3rem;
+}
+.loginNav.inactive {
+  top: 0;
+  transition: all 0.3s ease-in;
+  position: absolute;
+  transform: translateY(-200%);
+}
+.toggle-btn {
+  position: absolute;
+  top: 6rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .toggle-btn {
+    display: flex;
+  }
+
+  .userNav {
+      flex-direction: column;
+  }
+  .navbar-links {
+    display: none;
+    align-items: right;
+    width: 100vw;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+  }
+  .userNameInfo {
+    display: none;
+
+  }
+  .mainNav {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .toggle-btn {
+    top: auto;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}

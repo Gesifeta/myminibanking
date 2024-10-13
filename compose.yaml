@@ -1,0 +1,46 @@
+services:
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      - MONGO_DB_ATLAS_USER:"{{MONGO_DB_ATLAS_USER}}"
+      - MONGO_DB_ATLAS_PASSWORD="{{MONGO_DB_ATLAS_PASSWORD}}"
+      - MONGO_DB_ATLAS_IP="{{MONGO_DB_ATLAS_IP}}"
+    develop:
+      watch:
+      - path: ./client/package*.json
+        action: rebuild
+      - path: ./client
+        target: /app
+        action: sync
+    restart: unless-stopped
+  backend:
+    build: ./
+    ports:
+      - 5000:5000
+    environment:
+       - GRAPHQL_APP_PORT:"{{GRAPHQL_APP_PORT}}"
+       - JWT_SECRET:"{{JWT_SECRET}}"
+    develop:
+      watch:
+      - path: ./package*.json
+        action: rebuild
+      - path: ./
+        target: /app
+        action: sync
+    restart: unless-stopped
+  database:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_DB_INIT_ROOT_USER:"{{MONGO_DB_INIT_ROOT_USER}}"
+      - MONGO_DB_INIT_ROOT_PASSWORD:"{{MONGO_DB_INIT_ROOT_PASSWORD}}"
+    volumes:
+      - awash:/data/db     
+    restart: unless-stopped
+volumes:
+  awash:

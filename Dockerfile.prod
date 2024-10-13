@@ -1,0 +1,16 @@
+# build stage
+FROM node:16.15.1-alpine3.16 AS build-stage
+# make working directory
+WORKDIR /app
+COPY ./package*.json ./
+# install necessary dependancies
+RUN npm install --legacy-peer-deps
+COPY . .
+# execute commands
+RUN npm run build
+#
+FROM nginx:1.23-alpine
+COPY nginx/default.conf /etc/nginx/conf.d/
+COPY --from=build-stage /app/build /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT [ "nginx","-g","daemon off;" ]

@@ -1,0 +1,24 @@
+# build stage
+FROM node AS build-stage
+# set up user settng
+RUN addgroup app && adduser -S -G app app
+# make working directory
+WORKDIR /app
+COPY ./package*.json ./
+# before allow access to user app
+USER root
+RUN chown -R app:app ./
+
+#change back to user
+USER app
+# install necessary dependancies
+RUN npm install --legacy-peer-deps
+COPY . .
+# execute commands
+RUN npm run build
+#
+FROM nginx
+COPY --from=build-stage /app/build /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT [ "nginx","-g","daemon off;" ]
+
